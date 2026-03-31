@@ -4,7 +4,7 @@ import { ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative mx-auto max-w-6xl px-6 py-20">
+    <section id="projects" className="relative mx-auto max-w-6xl px-6 py-20 scroll-mt-24">
       <div className="mb-6 flex items-center gap-2 text-sm font-semibold text-cyan-200">
         <span className="h-[1px] w-8 bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
         Projects

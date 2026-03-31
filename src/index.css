@@ -10,6 +10,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 96px;
+}
+
 body {
   font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
   background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.22), transparent 25%),

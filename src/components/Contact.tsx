@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative mx-auto max-w-6xl px-6 py-20">
+    <section id="contact" className="relative mx-auto max-w-6xl px-6 py-20 scroll-mt-24">
       <motion.div
         className="glass relative overflow-hidden rounded-3xl border border-white/10 px-8 py-12 shadow-soft-glow"
         initial={{ opacity: 0, y: 20 }}

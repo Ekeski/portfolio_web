@@ -6,19 +6,16 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const handleNavClick = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href.startsWith('#')) {
-      event.preventDefault();
-      const target = document.querySelector(href);
-      if (target instanceof HTMLElement) {
-        const offset = 76; // header height
-        const y = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      } else {
-        window.location.hash = href;
-      }
-    }
+  const handleNavClick = (href: string) => () => {
     setOpen(false);
+    if (href.startsWith('#')) {
+      requestAnimationFrame(() => {
+        const target = document.querySelector(href);
+        if (target instanceof HTMLElement) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
   };
 
   const scrollVariants = useMemo(

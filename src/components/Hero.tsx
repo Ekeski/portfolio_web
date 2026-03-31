@@ -40,7 +40,7 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative isolate flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950 pt-24 pb-12 md:pt-28"
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950 pt-24 pb-12 md:pt-28 scroll-mt-24"
     >
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="hero-grid absolute inset-0" />
@@ -130,11 +130,11 @@ const Hero = () => {
         <div className="relative z-10 flex flex-1 justify-end w-full md:w-auto">
           <div className="hero-floating relative aspect-[4/5] w-full max-w-md">
             <div className="absolute -inset-6 rounded-[28px] bg-gradient-to-b from-indigo-500/25 via-transparent to-cyan-400/20 blur-2xl" />
-            <div className="glass relative h-full w-full overflow-hidden rounded-[28px] border border-white/10 p-6">
+            <div className="glass relative h-full w-full overflow-hidden rounded-[28px] border border-white/10 p-4 md:p-6">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(99,102,241,0.25),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(45,212,191,0.2),transparent_45%)]" />
-              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-slate-900/70 p-4 md:p-5">
                 <div className="flex items-center gap-4">
-                  <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 aspect-square">
+                  <div className="relative h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 aspect-square">
                     <img
                       src={PROFILE_IMAGE}
                       alt="Ekemewoma Ogbogbo Favour portrait"
@@ -145,22 +145,28 @@ const Hero = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Profile</p>
-                    <p className="text-2xl font-semibold text-white">Frontend Developer</p>
-                    <p className="text-sm text-slate-300">Delta State University, Abraka</p>
+                    <p className="text-xl font-semibold text-white sm:text-2xl">Frontend Developer</p>
+                    <p className="text-xs text-slate-300 sm:text-sm">Delta State University, Abraka</p>
                   </div>
                 </div>
-                <div className="grid gap-3 text-sm text-slate-200">
-                  <div className="flex items-center justify-between rounded-xl bg-white/5 px-3 py-3">
-                    <span className="text-slate-300">Stack</span>
-                    <span className="font-semibold text-white">React · TypeScript · Tailwind</span>
+                <div className="grid gap-2.5 text-sm text-slate-200">
+                  <div className="flex flex-col items-start gap-1 rounded-xl bg-white/5 px-3 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                    <span className="text-xs text-slate-300 sm:text-sm">Stack</span>
+                    <span className="font-semibold text-white text-sm sm:text-base">
+                      React · TypeScript · Tailwind
+                    </span>
                   </div>
-                  <div className="flex items-center justify-between rounded-xl bg-white/5 px-3 py-3">
-                    <span className="text-slate-300">Specialty</span>
-                    <span className="font-semibold text-white">GSAP · Framer Motion · AI</span>
+                  <div className="flex flex-col items-start gap-1 rounded-xl bg-white/5 px-3 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                    <span className="text-xs text-slate-300 sm:text-sm">Specialty</span>
+                    <span className="font-semibold text-white text-sm sm:text-base">
+                      GSAP · Framer Motion · AI
+                    </span>
                   </div>
-                  <div className="flex items-center justify-between rounded-xl bg-white/5 px-3 py-3">
-                    <span className="text-slate-300">Focus</span>
-                    <span className="font-semibold text-white">Scalable, polished UIs</span>
+                  <div className="flex flex-col items-start gap-1 rounded-xl bg-white/5 px-3 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                    <span className="text-xs text-slate-300 sm:text-sm">Focus</span>
+                    <span className="font-semibold text-white text-sm sm:text-base">
+                      Scalable, polished UIs
+                    </span>
                   </div>
                 </div>
                 {/* <div className="flex items-center gap-3 rounded-xl bg-gradient-to-r from-indigo-500/20 to-cyan-500/15 px-4 py-3 text-sm text-cyan-100">

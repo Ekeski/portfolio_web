@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-6 py-20">
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-20 scroll-mt-24">
       <div className="mb-6 flex items-center gap-2 text-sm font-semibold text-cyan-200">
         <span className="h-[1px] w-8 bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
         About
       </div>
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
-          className="glass rounded-3xl p-8"
+          className="glass rounded-3xl p-6 sm:p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -41,29 +41,29 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          className="glass rounded-3xl p-8"
+          className="glass rounded-3xl p-6 sm:p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <h3 className="text-xl font-semibold text-white">Snapshot</h3>
-          <div className="mt-4 space-y-4 text-slate-200">
-            <div className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
-              <span>Primary focus</span>
-              <span className="font-semibold text-white">Frontend Excellence</span>
+          <div className="mt-4 space-y-3 text-slate-200">
+            <div className="flex flex-col items-start gap-1 rounded-2xl bg-white/5 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
+              <span className="text-xs text-slate-300 sm:text-sm">Primary focus</span>
+              <span className="font-semibold text-white text-sm sm:text-base">Frontend Excellence</span>
             </div>
-            <div className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
-              <span>Core stack</span>
-              <span className="font-semibold text-white">React · TypeScript · Tailwind</span>
+            <div className="flex flex-col items-start gap-1 rounded-2xl bg-white/5 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
+              <span className="text-xs text-slate-300 sm:text-sm">Core stack</span>
+              <span className="font-semibold text-white text-sm sm:text-base">React · TypeScript · Tailwind</span>
             </div>
-            <div className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
-              <span>Motion</span>
-              <span className="font-semibold text-white">GSAP · Framer Motion</span>
+            <div className="flex flex-col items-start gap-1 rounded-2xl bg-white/5 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
+              <span className="text-xs text-slate-300 sm:text-sm">Motion</span>
+              <span className="font-semibold text-white text-sm sm:text-base">GSAP · Framer Motion</span>
             </div>
-            <div className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
-              <span>AI</span>
-              <span className="font-semibold text-white">Prompt design & workflows</span>
+            <div className="flex flex-col items-start gap-1 rounded-2xl bg-white/5 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-4">
+              <span className="text-xs text-slate-300 sm:text-sm">AI</span>
+              <span className="font-semibold text-white text-sm sm:text-base">Prompt design & workflows</span>
             </div>
           </div>
         </motion.div>
